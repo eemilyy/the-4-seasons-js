@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+body {
+    background-color: #DF8652;
+}
+
 .conteiner {
     text-align: center;
 }
@@ -6,4 +13,25 @@
     width: 500px;
     height: 500px;
     border-radius: 50%;
+    box-shadow: 10px 10px 5px black;
+}
+
+.spring-class {
+    background-color: #F9D273;
+    font-family: 'Fleur De Leah', cursive;
+    font-size: 100px;
+}
+
+.summer-class {
+    background-color: #FDFFFE;
+    
+}
+
+.autumn-class {
+    background-color: #F79603;
+}
+
+.winter-class {
+    background-color: #A5C2E3;
+    font-family: 'Merienda', cursive;
 }
