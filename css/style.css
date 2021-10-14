@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital@1&display=swap');
 
 .conteiner {
     text-align: center;
@@ -21,12 +22,15 @@
 }
 
 .summer-class {
-    background-color: blue;
-    
+    background-color: #FFAE65;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 3em;    
 }
 
 .autumn-class {
     background-color: #F79603;
+    font-family: 'Sigmar One', cursive;
+    font-size: 3em;
 }
 
 .winter-class {

@@ -3,7 +3,7 @@ var image = document.getElementById('img')
 
 var data = new Date()
 
-var mes = 6
+var mes = 12
 var dia = 25
 
 /*if(((mes + 1) >= 3 && dia >= 21) && ((mes + 1) <= 6 && dia < 21)){
