@@ -1,18 +1,10 @@
 const season = document.getElementById('season-name')
+var image = document.getElementById('img')
 
 var data = new Date()
 
-var mes = 3
-var dia = 21
-
-
-//season.classList.add('spring-class')
-document.body.classList.add('winter-class')
-
-season.innerText = ("Helloooo")
-
-console.log(dia)
-console.log(mes+1)
+var mes = 6
+var dia = 25
 
 /*if(((mes + 1) >= 3 && dia >= 21) && ((mes + 1) <= 6 && dia < 21)){
     season.innerText = ('Autumn')
@@ -27,13 +19,38 @@ else if(((mes + 1) >= 12 && dia >= 21) && ((mes + 1) <= 3 && dia < 21)){
     season.innerText = ('Summer')
 }*/
 
+function summer_season(){
+    image.src = "images/summer.jpg"
+    document.body.classList.add('summer-class')
+    season.innerText = ('Summer')
+}
+
+function autumn_season(){
+    image.src = "images/autumn.jpg"
+    document.body.classList.add('autumn-class')
+    season.innerText = ('Autumn')
+}
+
+function winter_season(){
+    image.src = "images/winter.jpg"
+    document.body.classList.add('winter-class')
+    season.innerText = ('Winter')
+}
+
+function spring_season(){
+    image.src = "images/spring.jpg"
+    document.body.classList.add('spring-class')
+    season.innerText = ('Spring')
+}
+
 if((mes) >= 3 && (mes) < 6){ //march, april, may, june
+    autumn_season()
     if((mes) == 3){
         if(dia >= 21){
             season.innerText = ('Autumn')
         }
         else{
-            season.innerText = ('Summer')
+            summer_season()
         }
     }
     else{
@@ -41,12 +58,13 @@ if((mes) >= 3 && (mes) < 6){ //march, april, may, june
     }
 }
 else if((mes) >= 6 && (mes) < 9){ //june, august, september
+    winter_season()
     if((mes) == 6){
         if(dia >= 21){
             season.innerText = ('Winter')
         }
         else{
-            season.innerText = ('Autumn')
+            autumn_season()
         }
     }
     else{
@@ -54,12 +72,13 @@ else if((mes) >= 6 && (mes) < 9){ //june, august, september
     }
 }
 else if((mes) >= 9 && (mes) < 12){ //september, october, november, december
+    spring_season()
     if((mes) == 9){
         if(dia >= 23){
             season.innerText = ('Spring')
         }
         else{
-            season.innerText = ('Winter')
+            winter_season()
         }
     }
     else{
@@ -67,12 +86,13 @@ else if((mes) >= 9 && (mes) < 12){ //september, october, november, december
     }
 }
 else{ //december, january, february, march
+    summer_season()
     if((mes) == 12){
         if(dia >= 21){
             season.innerText = ('Summer')
         }
         else{
-            season.innerText = ('Spring')
+            spring_season()
         }
     }
     else{
