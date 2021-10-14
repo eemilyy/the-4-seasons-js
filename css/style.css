@@ -1,0 +1,9 @@
+.conteiner {
+    text-align: center;
+}
+
+.img-season {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
