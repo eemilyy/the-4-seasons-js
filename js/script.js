@@ -3,22 +3,6 @@ var image = document.getElementById('img')
 
 var data = new Date()
 
-var mes = 9
-var dia = 23
-
-/*if(((mes + 1) >= 3 && dia >= 21) && ((mes + 1) <= 6 && dia < 21)){
-    season.innerText = ('Autumn')
-}
-else if(((mes + 1) >= 6 && dia >= 21) && ((mes + 1) <= 9 && dia < 23)){
-    season.innerText = ('Winter')
-}
-else if(((mes + 1) >= 9 && dia >= 23) && ((mes + 1) <= 12 && dia < 21)){
-    season.innerText = ('Spring')
-}
-else if(((mes + 1) >= 12 && dia >= 21) && ((mes + 1) <= 3 && dia < 21)){
-    season.innerText = ('Summer')
-}*/
-
 function summer_season(){
     document.body.classList.add('summer-class')
     image.src = "images/summer.jpg"
@@ -43,9 +27,9 @@ function spring_season(){
     season.innerText = ('Spring')
 }
 
-if((mes) >= 3 && (mes) < 6){ //march, april, may, june
-    if((mes) == 3){
-        if(dia < 21){
+if((data.getMonth() + 1) >= 3 && (data.getMonth() + 1) < 6){ //march, april, may, june
+    if((data.getMonth() + 1) == 3){
+        if(data.getDate() < 21){
             summer_season()          
         }
         else{
@@ -56,9 +40,9 @@ if((mes) >= 3 && (mes) < 6){ //march, april, may, june
         autumn_season()
     }
 }
-else if((mes) >= 6 && (mes) < 9){ //june, august, september
-    if((mes) == 6){
-        if(dia < 21){
+else if((data.getMonth() + 1) >= 6 && (data.getMonth() + 1) < 9){ //june, august, september
+    if((data.getMonth() + 1) == 6){
+        if(data.getDate() < 21){
             autumn_season()
         }
         else{
@@ -69,9 +53,9 @@ else if((mes) >= 6 && (mes) < 9){ //june, august, september
         winter_season()
     }
 }
-else if((mes) >= 9 && (mes) < 12){ //september, october, november, december
-    if((mes) == 9){
-        if(dia >= 23){
+else if((data.getMonth() + 1) >= 9 && (data.getMonth() + 1) < 12){ //september, october, november, december
+    if((data.getMonth() + 1) == 9){
+        if(data.getDate() >= 23){
             spring_season()
         }
         else{
@@ -83,8 +67,8 @@ else if((mes) >= 9 && (mes) < 12){ //september, october, november, december
     }
 }
 else{ //december, january, february, march
-    if((mes) == 12){
-        if(dia < 21){
+    if((data.getMonth() + 1) == 12){
+        if(data.getDate() < 21){
             spring_season()            
         }
         else{
@@ -98,7 +82,7 @@ else{ //december, january, february, march
 
 
 
-//const season_names = ["Autumn", "Summer", "Spring", "Winter"];
+//const season_nadata.getMonth() + 1 = ["Autumn", "Summer", "Spring", "Winter"];
 
 const month = {
     1: "January",
