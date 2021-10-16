@@ -6,9 +6,26 @@ let data = new Date()
 
 function clockT(){
     var d = new Date()
-    var t = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
-    var text = document.getElementById('timer')   
-    text.innerText = t
+    var day = d.getDate(), mon = d.getMonth(), year = d.getFullYear(), h = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
+    
+    if(day < 10){
+        day = "0" + d.getDate()
+    }
+    if(mon < 10){
+        mon = "0" + d.getMonth()
+    }
+    if(h < 10){
+        h = "0" + d.getHours()
+    }
+    if(min < 10){
+        min = "0" + d.getMinutes()
+    }
+    if(sec < 10){
+        sec = "0" + d.getSeconds()
+    }
+
+    var text = document.getElementById('timer')
+    text.innerText = day + "/" + mon + "/" + year + " " + h + ":" + min + ":" + sec
 }
 
 function summer_season(){
