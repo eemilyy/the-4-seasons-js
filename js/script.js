@@ -1,7 +1,15 @@
+setInterval(clockT, 1000)
 const season = document.getElementById('season-name')
 var image = document.getElementById('img')
 
-var data = new Date()
+let data = new Date()
+
+function clockT(){
+    var d = new Date()
+    var t = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+    var text = document.getElementById('timer')   
+    text.innerText = t
+}
 
 function summer_season(){
     document.body.classList.add('summer-class')
@@ -26,6 +34,8 @@ function spring_season(){
     image.src = "images/spring.jpg"
     season.innerText = ('Spring')
 }
+
+
 
 if((data.getMonth() + 1) >= 3 && (data.getMonth() + 1) < 6){ //march, april, may, june
     if((data.getMonth() + 1) == 3){
