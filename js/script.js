@@ -1,12 +1,14 @@
 setInterval(clockT, 1000)
 const season = document.getElementById('season-name')
+let song = document.getElementById('music')
+//spring.click()
 var image = document.getElementById('img')
 
 let data = new Date()
 
 function clockT(){
     var d = new Date()
-    var day = d.getDate(), mon = d.getMonth(), year = d.getFullYear(), h = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
+    var day = d.getDate() , mon = d.getMonth() + 1, year = d.getFullYear(), h = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
     
     if(day < 10){
         day = "0" + d.getDate()
@@ -30,6 +32,7 @@ function clockT(){
 
 function summer_season(){
     document.body.classList.add('summer-class')
+    song.src = "./musics/Summer.mp3"
     image.src = "images/summer.jpg"
     season.innerText = ('Summer')
 }
@@ -37,18 +40,21 @@ function summer_season(){
 function autumn_season(){
     document.body.classList.add('autumn-class')
     image.src = "images/autumn.jpg"
+    song.src = "./musics/Autumn.mp3"
     season.innerText = ('Autumn')
 }
 
 function winter_season(){
     document.body.classList.add('winter-class')
     image.src = "images/winter.jpg"
+    song.src = "./musics/Winter.mp3"
     season.innerText = ('Winter')
 }
 
 function spring_season(){
     document.body.classList.add('spring-class')
     image.src = "images/spring.jpg"
+    song.src = "./musics/Spring.mp3"
     season.innerText = ('Spring')
 }
 
@@ -106,7 +112,6 @@ else{ //december, january, february, march
         summer_season()
     }
 }
-
 
 
 //const season_nadata.getMonth() + 1 = ["Autumn", "Summer", "Spring", "Winter"];
