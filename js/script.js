@@ -14,7 +14,7 @@ function clockT(){
         day = "0" + d.getDate()
     }
     if(mon < 10){
-        mon = "0" + d.getMonth()
+        mon = "0" + (d.getMonth() + 1)
     }
     if(h < 10){
         h = "0" + d.getHours()
