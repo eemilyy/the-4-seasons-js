@@ -1,5 +1,7 @@
 setInterval(clockT, 1000)
 const season = document.getElementById('season-name')
+let song = document.getElementById('music')
+//spring.click()
 var image = document.getElementById('img')
 
 let data = new Date()
@@ -49,6 +51,7 @@ function winter_season(){
 function spring_season(){
     document.body.classList.add('spring-class')
     image.src = "images/spring.jpg"
+    song.src = "./musics/Spring.mp3"
     season.innerText = ('Spring')
 }
 
@@ -106,7 +109,6 @@ else{ //december, january, february, march
         summer_season()
     }
 }
-
 
 
 //const season_nadata.getMonth() + 1 = ["Autumn", "Summer", "Spring", "Winter"];
