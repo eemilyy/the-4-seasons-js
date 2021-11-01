@@ -8,13 +8,13 @@ let data = new Date()
 
 function clockT(){
     var d = new Date()
-    var day = d.getDate(), mon = d.getMonth(), year = d.getFullYear(), h = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
+    var day = 15 , mon = d.getMonth() + 1, year = d.getFullYear(), h = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
     
     if(day < 10){
         day = "0" + d.getDate()
     }
     if(mon < 10){
-        mon = "0" + d.getMonth()
+        mon = "0" + d.getMonth() + 1
     }
     if(h < 10){
         h = "0" + d.getHours()
@@ -32,6 +32,7 @@ function clockT(){
 
 function summer_season(){
     document.body.classList.add('summer-class')
+    song.src = "./musics/Summer.mp3"
     image.src = "images/summer.jpg"
     season.innerText = ('Summer')
 }
@@ -39,12 +40,14 @@ function summer_season(){
 function autumn_season(){
     document.body.classList.add('autumn-class')
     image.src = "images/autumn.jpg"
+    song.src = "./musics/Autumn.mp3"
     season.innerText = ('Autumn')
 }
 
 function winter_season(){
     document.body.classList.add('winter-class')
     image.src = "images/winter.jpg"
+    song.src = "./musics/Winter.mp3"
     season.innerText = ('Winter')
 }
 
