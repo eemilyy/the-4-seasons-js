@@ -8,13 +8,13 @@ let data = new Date()
 
 function clockT(){
     var d = new Date()
-    var day = 15 , mon = d.getMonth() + 1, year = d.getFullYear(), h = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
+    var day = d.getDate() , mon = d.getMonth() + 1, year = d.getFullYear(), h = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
     
     if(day < 10){
         day = "0" + d.getDate()
     }
     if(mon < 10){
-        mon = "0" + d.getMonth() + 1
+        mon = "0" + d.getMonth()
     }
     if(h < 10){
         h = "0" + d.getHours()
